@@ -1,0 +1,24 @@
+/*
+ * MICRO_conf.h
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: Mohamed ELameer
+ */
+
+#ifndef MICRO_CONF_H_
+#define MICRO_CONF_H_
+
+
+#ifndef F_CPU
+#define F_CPU 1000000UL
+#endif
+
+#include <avr/io.h>
+#include <util/delay.h>
+#include <avr/interrupt.h>
+
+
+
+
+
+#endif /* MICRO_CONF_H_ */

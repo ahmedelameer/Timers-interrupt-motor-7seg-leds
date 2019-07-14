@@ -1,0 +1,40 @@
+/*
+ * LED.c
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: Mohamed ELameer
+ */
+#include "LED.h"
+
+#define port    PD
+#define pin     6
+
+void LED_on_PL(){
+	Pin_output(port,pin);
+
+}
+void LED_on_NL(){
+	Pin_clear(port,pin);
+
+}
+void LED_off_PL(void){
+	Pin_clear(port,pin);
+}
+
+void LED_toggle_PL(){
+	Pin_toggle(port,pin);
+	delay_ms(1000);
+
+}
+
+
+void LED_toggle_NL(){
+	LED_off_PL();
+	delay_ms(1000);
+	LED_on_PL();
+	delay_ms(1000);
+
+
+}
+
+

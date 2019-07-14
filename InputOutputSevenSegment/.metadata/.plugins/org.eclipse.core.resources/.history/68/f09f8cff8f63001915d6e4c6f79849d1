@@ -1,0 +1,27 @@
+/*
+ * INTERFACE.h
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: Mohamed ELameer
+ */
+
+#ifndef INTERFACE_H_
+#define INTERFACE_H_
+
+
+#define Direction(X) DDRX
+#define Direction_output(X,pin) (Direction(X)=Direction(X)|(1<<pin))
+#define Direction_input(X,pin)  (Direction(X)=Direction(X)&~(1<<pin))
+#define Pin_output(X,pin)       (PORTX=PORTX|(1<<pin))
+#define Pin_clear(X,pin)        (PORTX=PORTX&~(1<<pin))
+#define Pin_toggle(X,pin)       (PORTX=PORTX^(1<<pin))
+#define Pin_input(X)            (PINX)
+#define Pin_is_set(X,pin)       (Pin_input(X)&(1<<pin))
+#define Pin_is_clear(X,pin)     (!(Pin_input(X)&(1<<pin)))
+#define Internal_pullup(X,pin)  (PORTX=PORTX|(1<<pin))
+
+
+
+
+
+#endif /* INTERFACE_H_ */

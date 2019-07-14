@@ -1,0 +1,32 @@
+/*
+ * main.c
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: Mohamed ELameer
+ */
+#include "segment.h"
+
+
+
+int main(void){
+	volatile unit8 num=0;
+	Direction_input(Direction_D,4);
+	Direction_C|=0x0F;
+	PC&=0xF0;
+	while(1){
+		if(Pin_is_set(PD,4)){
+			_delay_ms(30);
+			if(Pin_is_set(PD,4)){
+				if((PC&0x0F)==9)
+	                 num=0;
+				else{
+					 num++;
+				     PC=((PC&0xF0)|(num&0x0F));
+
+				    }
+			   }
+		}
+
+	}
+}
+

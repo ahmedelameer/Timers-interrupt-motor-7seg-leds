@@ -1,0 +1,38 @@
+08:16:30 **** Incremental Build of configuration Debug for project Ex1 ****
+make all 
+Building file: ../INT0.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"INT0.d" -MT"INT0.d" -c -o "INT0.o" "../INT0.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../INT0.h:14,
+                 from ../INT0.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../INT0.c
+ 
+Building target: Ex1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ex1.map -mmcu=atmega16 -o "Ex1.elf"  ./INT0.o ./main.o   
+Finished building target: Ex1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ex1.elf  >"Ex1.lss"
+Finished building: Ex1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Ex1.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:     310 bytes (1.9% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+08:16:30 Build Finished (took 520ms)
+

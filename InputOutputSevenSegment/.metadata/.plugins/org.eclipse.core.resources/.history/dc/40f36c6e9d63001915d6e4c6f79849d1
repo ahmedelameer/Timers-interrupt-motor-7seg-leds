@@ -1,0 +1,20 @@
+/*
+ * main.c
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: Mohamed ELameer
+ */
+
+#include "LED.h"
+
+
+
+
+int main(void){
+	Direction_output(Direction_D,6);
+	Pin_output(PD,6);
+	while(1){
+		LED_toggle_NL();
+
+     }
+}

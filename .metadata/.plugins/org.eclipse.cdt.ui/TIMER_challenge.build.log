@@ -1,0 +1,49 @@
+21:16:35 **** Build of configuration Debug for project TIMER_challenge ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../segment.h:14,
+                 from ../TIMERS.h:11,
+                 from ../main.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building file: ../timer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"timer.d" -MT"timer.d" -c -o "timer.o" "../timer.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../segment.h:14,
+                 from ../TIMERS.h:11,
+                 from ../timer.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../timer.c
+ 
+Building target: TIMER_challenge.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,TIMER_challenge.map -mmcu=atmega16 -o "TIMER_challenge.elf"  ./main.o ./timer.o   
+Finished building target: TIMER_challenge.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S TIMER_challenge.elf  >"TIMER_challenge.lss"
+Finished building: TIMER_challenge.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 TIMER_challenge.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:     364 bytes (2.2% Full)
+(.text + .data + .bootloader)
+
+Data:          2 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+21:16:36 Build Finished (took 440ms)
+

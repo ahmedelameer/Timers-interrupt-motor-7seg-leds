@@ -1,0 +1,41 @@
+/*
+ * main.c
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: Mohamed ELameer
+ */
+#include "segment.h"
+
+
+
+int main(void){
+	volatile unit8 num=0,flag1=0,flag2=0;
+	Direction_input(Direction_A,0);
+	Direction_input(Direction_A,1);
+	Direction_C|=0xF0;
+	PC&=0x0F;
+	while(1){
+		if(Pin_is_set(PIND,4)){
+			_delay_ms(30);
+			if(Pin_is_set(PIND,4)){
+				if(flag==0){
+				if(PORT_check(PC,9)){
+	                 num=0;
+	                 PORT_equal(PC,num);
+				   }
+				else{
+					 num++;
+					 PORT_equal(PC,num);
+
+				    }
+				flag=1;
+			   }
+
+		}
+
+	}
+		else
+			flag=0;
+}
+}
+

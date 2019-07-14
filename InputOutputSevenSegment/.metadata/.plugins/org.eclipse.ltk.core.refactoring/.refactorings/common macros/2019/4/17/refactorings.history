@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;common macros/MICRO_conf.h&apos; to &apos;MICRO_setting.h&apos;" description="Rename resource &apos;MICRO_conf.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="MICRO_conf.h" name="MICRO_setting.h" stamp="1555776007721" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;common macros/UNIT_types&apos; to &apos;UNIT_types.h&apos;" description="Rename resource &apos;UNIT_types&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="UNIT_types" name="UNIT_types.h" stamp="1555776099605" updateReferences="true"/>
+</session>

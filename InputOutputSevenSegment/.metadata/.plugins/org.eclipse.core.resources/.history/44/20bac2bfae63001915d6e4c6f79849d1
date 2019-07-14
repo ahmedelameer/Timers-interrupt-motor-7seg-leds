@@ -1,0 +1,30 @@
+/*
+ * main.c
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: Mohamed ELameer
+ */
+
+#include "LED.h"
+
+
+
+
+void mian (void){
+	Direction_ouput(Direction_C,0);
+	Pin_output(PC,0);
+	Direction_input(PB,0);
+	Internal_pullup(PB,0);
+	while(1){
+		if(Pin_is_clear(PINB,0)){
+			_delay_ms(30);
+			if(Pin_is_clear(PINB,0)){
+				LED_toggle_NL();
+			}
+
+		}
+
+
+	}
+}
+

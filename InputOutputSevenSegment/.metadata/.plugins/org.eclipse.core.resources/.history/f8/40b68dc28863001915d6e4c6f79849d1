@@ -1,0 +1,17 @@
+/*
+ * INTERFACE.h
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: Mohamed ELameer
+ */
+
+#ifndef INTERFACE_H_
+#define INTERFACE_H_
+
+
+#define Direction(X) DDRX
+#define Direction_ouput(Direction(X),pin) (Direction(X)=Direction(X)|(1<<pin));
+
+
+
+#endif /* INTERFACE_H_ */

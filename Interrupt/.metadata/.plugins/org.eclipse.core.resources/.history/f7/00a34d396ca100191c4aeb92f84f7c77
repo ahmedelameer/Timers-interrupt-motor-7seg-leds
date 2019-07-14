@@ -1,0 +1,39 @@
+/*
+ * main.c
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: Mohamed ELameer
+ */
+
+#include"INT.h"
+
+
+
+
+int main(void){
+
+	/*Direction_output(Direction_C,0);
+	Pin_output(PC,2);
+    INT0_init();*/
+	unit8 i=0;
+	DDRC=0xFF;
+	DDRA=0;
+	PORTC=0xFF;
+
+	_delay_ms(5000);
+	for(i=0;i<8;i++){
+		PORTC=PORTC & PORTC--;
+		_delay_ms(2000);
+	}
+
+	while(1){
+
+
+	}
+
+
+
+
+
+
+}

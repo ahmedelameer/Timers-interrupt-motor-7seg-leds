@@ -1,0 +1,38 @@
+00:45:10 **** Incremental Build of configuration Debug for project challeng1 ****
+make all 
+Building file: ../challeng1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"challeng1.d" -MT"challeng1.d" -c -o "challeng1.o" "../challeng1.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../LED.h:14,
+                 from ../challeng1.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../challeng1.c
+ 
+Building target: challeng1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,challeng1.map -mmcu=atmega16 -o "challeng1.elf"  ./LED.o ./challeng1.o   
+Finished building target: challeng1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S challeng1.elf  >"challeng1.lss"
+Finished building: challeng1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 challeng1.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    3440 bytes (21.0% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+00:45:10 Build Finished (took 420ms)
+

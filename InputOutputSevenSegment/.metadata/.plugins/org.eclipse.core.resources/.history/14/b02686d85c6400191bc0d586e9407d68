@@ -1,0 +1,14 @@
+/*
+ * main.c
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: Mohamed ELameer
+ */
+#include "segment.h"
+
+
+
+int main(void){
+	Direction_input(Direction_D,4);
+}
+

@@ -1,0 +1,18 @@
+/*
+ * main.c
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: Mohamed ELameer
+ */
+
+#include "LED.h"
+
+
+
+
+void main(void){
+
+	Direction_input(Direction_A,3);
+
+
+}

@@ -1,0 +1,42 @@
+14:22:07 **** Incremental Build of configuration Debug for project 11.c ****
+make all 
+Building file: ../INT.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"INT.d" -MT"INT.o" -c -o "INT.o" "../INT.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../INT.h:14,
+                 from ../INT.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../INT.c
+ 
+Building target: 11.c.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,11.c.map -mmcu=atmega32 -o "11.c.elf"  ./INT.o ./main.o   
+Finished building target: 11.c.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S 11.c.elf  >"11.c.lss"
+Finished building: 11.c.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex 11.c.elf  "11.c.hex"
+Finished building: 11.c.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 11.c.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4250 bytes (13.0% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+14:22:08 Build Finished. 0 errors, 1 warnings. (took 1s.526ms)
+

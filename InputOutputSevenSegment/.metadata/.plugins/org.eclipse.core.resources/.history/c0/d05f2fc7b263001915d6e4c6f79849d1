@@ -1,0 +1,39 @@
+/*
+ * main.c
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: Mohamed ELameer
+ */
+
+
+#include "LED.h"
+
+
+
+int main (void)
+{
+	unit8 flag=0;
+	Direction_output(Direction_C,0);
+	Pin_output(PC,0);
+	Direction_input(PB,0);
+	Internal_pullup(PB,0);
+	while(1){
+		if(Pin_is_clear(PINB,0)){
+			_delay_ms(30);
+			if(Pin_is_clear(PINB,0)){
+				if(flag==0){
+				LED_on_NL();
+				flag=1;
+				     }
+				else if (flag==1){
+					LED_off_NL();
+				    }
+			     }
+
+		   }
+
+
+
+	    }
+
+}

@@ -1,0 +1,19 @@
+/*
+ * main.c
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: Mohamed ELameer
+ */
+
+#include "LED.h"
+
+
+
+
+int main(void){
+	Direction_output(Direction_A,3);
+	Pin_output(PORTC,5);
+
+
+
+}

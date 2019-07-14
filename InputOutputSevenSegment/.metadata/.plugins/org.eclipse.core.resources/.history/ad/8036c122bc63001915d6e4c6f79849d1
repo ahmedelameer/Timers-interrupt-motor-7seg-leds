@@ -1,0 +1,28 @@
+/*
+ * challeng1.c
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: Mohamed ELameer
+ */
+
+#include"LED.h"
+
+
+
+
+
+int main(void){
+	unit8 i;
+	Direction_C=0xFF;
+	PORTC=0xFF;  /*negative logic*/
+
+	while(1){
+		for(i=0;i<8;i++){
+		Pin_clear(PC,i);  /*negative logic*/
+		_delay_ms(500);
+		}
+		if(i==8)
+			i=0;
+	}
+
+}

@@ -1,0 +1,24 @@
+/*
+ * LED.c
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: Mohamed ELameer
+ */
+#include "LED.h"
+
+void LED_on(){
+	if(Pin_is_set(PINA,3)){
+	   _delay_ms(100);
+	   if(Pin_is_set(PINA,3)){
+	       Pin_output(PORTC,5);
+
+	          }
+	}
+	else{
+		Pin_clear(PORTC,5);
+		//_delay_ms(1000);
+	}
+
+}
+
+

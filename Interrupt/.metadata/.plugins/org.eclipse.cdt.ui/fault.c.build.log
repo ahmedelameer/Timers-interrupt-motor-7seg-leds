@@ -1,0 +1,21 @@
+13:08:22 **** Build of configuration Debug for project fault.c ****
+make all 
+Building file: ../INT.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega128 -DF_CPU=1000000UL -MMD -MP -MF"INT.d" -MT"INT.o" -c -o "INT.o" "../INT.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../INT.h:14,
+                 from ../INT.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../INT.c: In function '__vector_1':
+../INT.c:16: error: 'IINTF0' undeclared (first use in this function)
+../INT.c:16: error: (Each undeclared identifier is reported only once
+../INT.c:16: error: for each function it appears in.)
+../INT.c: In function 'INT0_init':
+../INT.c:25: error: 'EIMCK' undeclared (first use in this function)
+../INT.c:25: error: 'IINT0' undeclared (first use in this function)
+make: *** [INT.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+
+13:08:22 Build Failed. 4 errors, 1 warnings. (took 424ms)
+

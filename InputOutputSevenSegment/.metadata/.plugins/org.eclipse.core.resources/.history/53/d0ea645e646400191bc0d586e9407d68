@@ -1,0 +1,44 @@
+/*
+ * main.c
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: Mohamed ELameer
+ */
+#include "segment.h"
+
+
+
+int main(void){
+    unit8 num=0,flag=0;
+	Direction_input(Direction_D,4);
+	Direction_C|=0x0F;
+	PC&=0xF0;
+
+		 while(1)
+		    {
+				// check if the push button is pressed or not
+				if( PIND & (1<<PD4) )
+				{
+					_delay_ms(30);
+					//second check due to switch bouncing
+
+					if( PIND & (1<<PD4) )
+					{
+						if((PORTC & 0x0F) == 9)
+						{
+							// if overflow occurs
+							num = 0;
+							PORTC = (PORTC & 0xF0) | (num & 0x0F);
+						}
+						else
+						{
+							// increment 7-segment every press
+							num++;
+							PORTC = (PORTC & 0xF0) | (num & 0x0F);
+						}
+					}
+					while( PIND & (1<<PD4) ){} // wait until switch is released
+				}
+		    }
+}
+
